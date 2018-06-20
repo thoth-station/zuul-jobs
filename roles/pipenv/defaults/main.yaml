@@ -1,0 +1,6 @@
+---
+pipenv_environment: {}
+pipenv_extra_args: ""
+pipenv_executable: pipenv
+
+zuul_work_dir: "{{ zuul.project.src_dir }}"

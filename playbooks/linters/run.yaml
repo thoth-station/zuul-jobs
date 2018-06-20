@@ -1,4 +1,11 @@
 ---
 - hosts: all
   roles:
-    - linters
+    - ensure-pipenv
+    - role: linters
+      linters:
+      - coala
+      - bashate
+      - yamllint
+      - golint
+      - ansible-lint

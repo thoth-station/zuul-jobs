@@ -3,7 +3,7 @@ Runs linters for a project
 **Role Variables**
 
 .. zuul:rolevar:: linters
-   :default: [flake8,doc8,bashate,yamllint,ansible-lint,golint]
+   :default: [coala,flake8,doc8,bashate,yamllint,ansible-lint,golint]
 
    List of linters to execute.
 
