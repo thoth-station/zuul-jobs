@@ -1,6 +1,6 @@
 ---
 - name: "Run coala"
-  shell: coala --ci --config .coafile --no-color
+  shell: coala --config .coafile --json --non-interactive
   register: _coala
   ignore_errors: yes
   environment:
