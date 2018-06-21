@@ -3,7 +3,6 @@
   roles:
     - role: linters
       linters:
-      - coala
       - bashate
       - yamllint
       - golint
