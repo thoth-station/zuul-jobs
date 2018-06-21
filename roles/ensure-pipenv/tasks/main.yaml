@@ -1,3 +1,0 @@
----
-- name: Ensure pipenv is installed
-  shell: type pipenv || pip install --user pipenv
