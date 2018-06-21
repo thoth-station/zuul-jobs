@@ -1,7 +1,6 @@
 ---
 - hosts: all
   roles:
-    - ensure-pipenv
     - role: linters
       linters:
       - coala
