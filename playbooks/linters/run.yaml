@@ -1,9 +1,4 @@
 ---
 - hosts: all
   roles:
-    - role: linters
-      linters:
-      - bashate
-      - yamllint
-      - golint
-      - ansible-lint
+    - linters
