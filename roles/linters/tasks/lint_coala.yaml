@@ -4,6 +4,7 @@
   register: _coala
   ignore_errors: yes
   environment:
+    LC_ALL=C
     PATH: "/opt/rh/rh-python36/root/usr/bin:{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/.local/bin"
     LD_LIBRARY_PATH: "/opt/rh/rh-python36/root/usr/lib64:{{ ansible_env.LD_LIBRARY_PATH }}"
     PKG_CONFIG_PATH: "/opt/rh/rh-python36/root/usr/lib64/pkgconfig:{{ ansible_env.PKG_CONFIG_PATH }}"
