@@ -1,6 +1,5 @@
 ---
 linters:
-  - coala
   - bashate
   - yamllint
   - golint
