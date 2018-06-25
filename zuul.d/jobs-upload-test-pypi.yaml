@@ -1,0 +1,10 @@
+---
+- job:
+    name: upload-test-pypi
+    post-review: true
+    description: Release wheel to test.pypi using goern account
+    run: playbooks/publish/release.yaml
+    post-run: playbooks/publish/pypi.yaml
+    secrets:
+      - secret: pypi_test_goern
+        name: pypi_info
