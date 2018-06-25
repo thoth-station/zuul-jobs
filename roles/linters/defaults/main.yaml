@@ -1,5 +1,7 @@
 ---
 linters:
+  - flake8
+  - doc8
   - bashate
   - yamllint
   - golint
