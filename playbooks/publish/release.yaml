@@ -1,3 +1,4 @@
 - hosts: all
   roles:
-    - build-python-release
+    - role: build-python-release:
+      release_python: "scl enable rh-python35 -- python"
