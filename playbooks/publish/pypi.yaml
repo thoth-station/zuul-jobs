@@ -2,4 +2,5 @@
 - hosts: all
   roles:
     - role: upload-pypi
+      pypi_twine_executable: "scl enable rh-python36 -- twine"
       when: zuul_success | bool
