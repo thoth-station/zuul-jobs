@@ -1,0 +1,8 @@
+- name: Emit pipenv command
+  debug:
+    msg: "Running pipenv: {{ pipenv_executable }} run {{ pipenv_extra_args }}"
+
+- name: Run pipenv
+  args:
+    chdir: "{{ zuul_work_dir }}"
+  command: "{{ pipenv_executable }} run {{ pipenv_extra_args }}"

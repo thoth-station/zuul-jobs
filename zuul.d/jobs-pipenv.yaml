@@ -5,3 +5,4 @@
     description: |
         Base job for all things Pipenv.
     pre-run: playbooks/pipenv/pre.yaml
+    run: playbooks/pipenv/run.yaml
