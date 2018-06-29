@@ -1,6 +1,7 @@
 ---
 - job:
-    name: ensure-pipenv
-    post-review: false
-    description: Ensure Pipenv is installed
-    run: playbooks/pipenv/ensure.yaml
+    name: pipenv
+    parent: unittests
+    description: |
+        Base job for all things Pipenv.
+    pre-run: playbooks/pipenv/pre.yaml
