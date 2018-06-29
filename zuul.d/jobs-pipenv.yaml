@@ -1,0 +1,6 @@
+---
+- job:
+    name: ensure-pipenv
+    post-review: true
+    description: Ensure Pipenv is installed
+    run: playbooks/pipenv/ensure.yaml
