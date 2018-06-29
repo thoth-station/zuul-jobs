@@ -6,3 +6,9 @@
   args:
     chdir: "{{ zuul_work_dir }}"
   command: "{{ pipenv_executable }} run {{ pipenv_extra_args }}"
+  environment:
+    LC_ALL: "C"
+    PATH: "/opt/rh/rh-python36/root/usr/bin:{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/.local/bin"
+    LD_LIBRARY_PATH: "/opt/rh/rh-python36/root/usr/lib64:{{ ansible_env.LD_LIBRARY_PATH }}"
+    PKG_CONFIG_PATH: "/opt/rh/rh-python36/root/usr/lib64/pkgconfig:{{ ansible_env.PKG_CONFIG_PATH }}"
+    XDG_DATA_DIRS: "/opt/rh/rh-python36/root/usr/share:{{ ansible_env.XDG_DATA_DIRS }}:/usr/local/share:/usr/share"
