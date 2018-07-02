@@ -1,9 +1,5 @@
 ---
 linters:
   - coala
-  - bashate
-  - yamllint
-  - golint
-  - ansible-lint
 
 ansible_lint_roles_dir: ""
