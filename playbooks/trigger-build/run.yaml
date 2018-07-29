@@ -4,8 +4,9 @@
   tasks:
     - name: Trigger OpenShift Build
       uri:
-        method: POST
+        method: "POST"
         url: "{{ webhook_url }}"
+        body_format: json
         validate_certs: no
         follow_redirects: all
         return_content: yes
