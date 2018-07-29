@@ -1,0 +1,5 @@
+---
+- job:
+    name: trigger-build
+    description: This will trigger an OpenShift Build
+    run: playbooks/trigger-build/run.yaml
