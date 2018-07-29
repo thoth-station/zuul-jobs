@@ -9,5 +9,3 @@
         body_format: json
         validate_certs: no
         follow_redirects: all
-        return_content: yes
-      register: trigger_response
