@@ -3,4 +3,10 @@
 
   tasks:
     - name: Trigger OpenShift Build
-      command: curl -k -L -XPOST -H "Content-Type: application/json" "{{ webhook_url }}"
+      uri:
+        method: POST
+        url: "{{ webhook_url }}"
+        validate_certs: no
+        follow_redirects: all
+        headers:
+          Content-Type: "application/json"
