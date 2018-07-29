@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Trigger OpenShift Build
+      uri:
+        url: "{{ webhook_url }}"
+        return_content: yes
+    register: trigger_response
