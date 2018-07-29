@@ -6,6 +6,7 @@
       uri:
         method: POST
         url: "{{ webhook_url }}"
+        body: ""
         validate_certs: no
         follow_redirects: all
         headers:
