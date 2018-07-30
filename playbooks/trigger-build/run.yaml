@@ -5,7 +5,7 @@
     - name: Trigger OpenShift Build
       uri:
         method: POST
-        url: "{{ webhook_url }}/{{ webhooks_secret.key }}/generic"
+        url: "{{ webhook_url }}/{{ webhook_secret.key }}/generic"
         body_format: json
         content: ""
         validate_certs: no
