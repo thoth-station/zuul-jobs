@@ -1,0 +1,8 @@
+- job:
+    name: thoth-coala
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: coala-pod
+    run: playbooks/linters/run.yaml

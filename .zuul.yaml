@@ -2,7 +2,4 @@
 - project:
     check:
       jobs:
-        - linters:
-            vars:
-              linters:
-                - ansible-lint
+        - thoth-coala
