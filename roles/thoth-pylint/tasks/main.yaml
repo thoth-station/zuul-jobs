@@ -1,0 +1,5 @@
+---
+- name: Run Pylint
+  command: pylint .
+  args:
+    chdir: "{{ zuul.project.src_dir }}"

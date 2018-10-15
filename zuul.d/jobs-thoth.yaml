@@ -1,0 +1,27 @@
+- job:
+    name: thoth-coala
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: thoth-coala
+    run: playbooks/thoth/coala.yaml
+
+- job:
+    name: thoth-pylint
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: thoth-pylint
+    run: playbooks/thoth/pylint.yaml
+
+- job:
+    name: thoth-pytest
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: thoth-pytest
+    run: playbooks/thoth/pytest.yaml
+

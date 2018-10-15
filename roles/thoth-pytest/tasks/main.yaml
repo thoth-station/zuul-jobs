@@ -1,0 +1,5 @@
+---
+- name: Run Pytest
+  command: pytest
+  args:
+    chdir: "{{ zuul.project.src_dir }}"

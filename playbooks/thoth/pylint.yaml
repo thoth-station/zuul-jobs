@@ -1,4 +1,4 @@
 ---
 - hosts: pod
   roles:
-    - linters
+    - thoth-linters

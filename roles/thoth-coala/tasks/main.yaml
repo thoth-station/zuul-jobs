@@ -1,0 +1,5 @@
+---
+- name: Run Coala
+  command: coala --ci
+  args:
+    chdir: "{{ zuul.project.src_dir }}"
