@@ -1,6 +1,8 @@
 ---
 - name: install requirments via pipenv
-  command: pipenv install
+  command: pipenv install --dev
+  args:
+    chdir: "{{ zuul.project.src_dir }}"
 
 - name: Run Pytest
   command: pipenv run pytest
