@@ -1,0 +1,4 @@
+---
+- hosts: pod
+  roles:
+    - thoth-linters
