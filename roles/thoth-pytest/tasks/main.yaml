@@ -1,5 +1,16 @@
 ---
-- name: Run Pytest
-  command: pytest
+- name: "pip and pipenv version"
+  command: "pip3 --version"
+
+- name: "pip and pipenv version"
+  command: "pipenv --version"
+      
+- name: "install requirments via pipenv"
+  command: "pipenv install --dev"
+  args:
+    chdir: "{{ zuul.project.src_dir }}"
+
+- name: "run pytest"
+  command: "pipenv run pytest"
   args:
     chdir: "{{ zuul.project.src_dir }}"
