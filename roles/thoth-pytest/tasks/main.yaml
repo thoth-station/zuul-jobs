@@ -1,10 +1,13 @@
 ---
-- name: install requirments via pipenv
-  command: pipenv install --dev
+- name: "pip and pipenv version"
+  shell: "pipenv --version; pip --version"
+    
+- name: "install requirments via pipenv"
+  command: "pipenv install --dev"
   args:
     chdir: "{{ zuul.project.src_dir }}"
 
-- name: Run Pytest
-  command: pipenv run pytest
+- name: "run pytest"
+  command: "pipenv run pytest"
   args:
     chdir: "{{ zuul.project.src_dir }}"
