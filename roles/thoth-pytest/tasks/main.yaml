@@ -1,7 +1,10 @@
 ---
 - name: "pip and pipenv version"
-  shell: "pipenv --version; pip --version"
-    
+  command: "pip3 --version"
+
+- name: "pip and pipenv version"
+  command: "pipenv --version"
+      
 - name: "install requirments via pipenv"
   command: "pipenv install --dev"
   args:
