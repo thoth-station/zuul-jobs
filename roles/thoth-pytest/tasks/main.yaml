@@ -11,6 +11,6 @@
     chdir: "{{ zuul.project.src_dir }}"
 
 - name: "run pytest"
-  command: "pipenv run pytest"
+  command: "pipenv run python3 setup.py test"
   args:
     chdir: "{{ zuul.project.src_dir }}"
