@@ -1,4 +1,0 @@
-- hosts: all
-  roles:
-    - role: build-python-release
-      release_python: "scl enable rh-python36 -- env LC_ALL=en_US.utf8 python3"
