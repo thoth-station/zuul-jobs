@@ -25,3 +25,13 @@
           label: thoth-pytest
     run: playbooks/thoth/pytest.yaml
 
+- job:
+    name: "thoth-behave"
+    parent: "base-openshift-pod"
+    description: |
+      This job will use behave to run some integration tests.
+    run: playbooks/thoth/behave.yaml
+    nodeset:
+      nodes:
+        - name: "pod"
+          label: "thoth-python36"
