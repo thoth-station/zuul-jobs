@@ -6,7 +6,7 @@
   command: "pipenv --version"
       
 - name: "install requirments via pipenv"
-  command: "pipenv install --dev"
+  command: "PIPENV_NOSPIN=1 PIPENV_HIDE_EMOJIS=1 PIPENV_COLORBLIND=1 pipenv install --dev"
   args:
     chdir: "{{ zuul.project.src_dir }}"
 
