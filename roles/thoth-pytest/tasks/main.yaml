@@ -6,9 +6,13 @@
   command: "pipenv --version"
       
 - name: "install requirments via pipenv"
-  command: "PIPENV_NOSPIN=1 PIPENV_HIDE_EMOJIS=1 PIPENV_COLORBLIND=1 pipenv install --dev"
+  command: "pipenv install --dev"
   args:
     chdir: "{{ zuul.project.src_dir }}"
+  environment:
+    PIPENV_NOSPIN: "1"
+    PIPENV_HIDE_EMOJIS: "1"
+    PIPENV_COLORBLIND: "1"
 
 - name: "run pytest"
   command: "pipenv run python3 setup.py test"
