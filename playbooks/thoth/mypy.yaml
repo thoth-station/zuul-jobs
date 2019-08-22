@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: "Install mypy"
+      command: "pip3 install --user mypy==0.720"
+
+    - name: "Run mypy"
+      command: "mypy --ignore-missing-imports thoth/"
+      args:
+        chdir: "{{ zuul.project.src_dir }}"

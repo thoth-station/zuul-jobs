@@ -35,3 +35,12 @@
       nodes:
         - name: "pod"
           label: "thoth-python36"
+
+- job:
+    name: thoth-mypy
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: thoth-mypy
+    run: playbooks/thoth/mypy.yaml
