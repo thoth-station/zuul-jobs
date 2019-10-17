@@ -18,4 +18,4 @@
   command: "pipenv run python3 setup.py test"
   args:
     chdir: "{{ zuul.project.src_dir }}"
-  environment: "{{ zuul.project.vars }}"
+  environment: "{{ project.vars }}"
