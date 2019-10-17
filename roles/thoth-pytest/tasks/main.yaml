@@ -4,7 +4,7 @@
 
 - name: "pip and pipenv version"
   command: "pipenv --version"
-      
+
 - name: "install requirments via pipenv"
   command: "pipenv install --dev"
   args:
@@ -18,3 +18,4 @@
   command: "pipenv run python3 setup.py test"
   args:
     chdir: "{{ zuul.project.src_dir }}"
+  environment: "{{ zuul.project.vars }}"
