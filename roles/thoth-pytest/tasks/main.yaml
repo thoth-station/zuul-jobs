@@ -14,11 +14,8 @@
     PIPENV_HIDE_EMOJIS: "1"
     PIPENV_COLORBLIND: "1"
 
-- name: "debugging vars"
-  debug: var=hostvars["pod"]
-
 - name: "run pytest"
   command: "pipenv run python3 setup.py test"
   args:
     chdir: "{{ zuul.project.src_dir }}"
-  environment: "{{ hostvars }}"
+  environment: "{{ hostvars.pod }}"
