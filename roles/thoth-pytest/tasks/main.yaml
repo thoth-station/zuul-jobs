@@ -1,21 +1,20 @@
 ---
-- name: "pip and pipenv version"
+- name: "pip version"
   command: "pip3 --version"
 
-- name: "pip and pipenv version"
-  command: "pipenv --version"
+- name: "micropipenv version"
+  command: "micropipenv --version"
 
-- name: "install requirments via pipenv"
-  command: "pipenv install --dev"
+- name: "create a virtual environment"
+  command: "python3 -m venv venv/ && . venv/bin/activate"
+
+- name: "install requirments via micropipenv"
+  command: "micropipenv install --dev"
   args:
     chdir: "{{ zuul.project.src_dir }}"
-  environment:
-    PIPENV_NOSPIN: "1"
-    PIPENV_HIDE_EMOJIS: "1"
-    PIPENV_COLORBLIND: "1"
 
 - name: "run pytest"
-  command: "pipenv run python3 setup.py test"
+  command: "python3 setup.py test"
   args:
     chdir: "{{ zuul.project.src_dir }}"
   environment: "{{ hostvars.pod }}"
