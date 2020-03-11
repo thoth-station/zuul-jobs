@@ -26,6 +26,15 @@
     run: playbooks/thoth/pytest.yaml
 
 - job:
+    name: thoth-pytest-py37
+    parent: base-openshift-pod
+    nodeset:
+      nodes:
+        - name: pod
+          label: thoth-pytest-py37
+    run: playbooks/thoth/pytest.yaml
+
+- job:
     name: "thoth-behave"
     parent: "base-openshift-pod"
     description: |
